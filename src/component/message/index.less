@@ -1,10 +1,23 @@
 .message-wrap {
   width: 100%;
-
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 10px;
   &__current-user {
     text-align: right;
+    justify-content: flex-end;
+
+    .message-action__revoke {
+      margin-right: 10px;
+    }
   }
   &__other-user {
     text-align: left;
+    justify-content: flex-start;
+  }
+
+  &__system {
+    justify-content: center;
+    text-align: center;
   }
 }

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import MessageFlow from "../../component/message-flow";
 import UserActionBar from "../../component/user-action-bar";
+import "./index.less";
 function Chat(props: any) {
-  const [currentUser, setCurrentUser] = useState<string | null>(null);
-  const { eventBus } = props;
+  const [currentUser, setCurrentUser] = useState<string | null>("A");
+  const { eventBus, members } = props;
   useEffect(() => {
     eventBus.subscribe("ON_MEMBER_CHANGE", (member: string) => {
       setCurrentUser(member);
@@ -16,7 +17,11 @@ function Chat(props: any) {
         <div className="chat-messages">
           <MessageFlow currentUser={currentUser} eventBus={eventBus} />
         </div>
-        <UserActionBar currentUser={currentUser} eventBus={eventBus} />
+        <UserActionBar
+          currentUser={currentUser}
+          eventBus={eventBus}
+          members={members}
+        />
       </main>
     </div>
   );

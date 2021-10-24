@@ -5,7 +5,11 @@ import "./index.less";
 
 function MessageWrap(props: any) {
   const { messageType } = props;
-  return <div className={`message-wrap__${messageType}`}>{props.children}</div>;
+  return (
+    <div className={`message-wrap message-wrap__${messageType}`}>
+      {props.children}
+    </div>
+  );
 }
 function Message(props: any) {
   const { currentUser, message } = props;

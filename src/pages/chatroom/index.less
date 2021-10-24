@@ -1,7 +1,21 @@
-.page__chatroom {
-  width: 100%;
+.page__chat {
+  height: 100vh;
+  flex: 1;
   display: flex;
-  flex-flow: nowrap;
+  flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  padding: 30px;
+}
+.chat-header {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #eee;
+  color: #0089cd;
+  border-bottom: 1px solid #cecece;
+}
+.chat-messages {
+  height: 70vh;
+  background: #efefef;
 }
