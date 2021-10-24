@@ -2,6 +2,7 @@ import { useState } from "react";
 import { DemoMessageQueue } from "../../utils/demoMessageQueue";
 import { MessageContentType, IMessage, MessageSender } from "../../types";
 import { memberList } from "../../utils/configConstants";
+import "./index.less";
 export default function UserActionBar(props: any) {
   const { currentUser, eventBus, members } = props;
   const [currentMessage, setCurrentMessage] = useState<string>("");
@@ -58,6 +59,7 @@ export default function UserActionBar(props: any) {
       <input
         className="chat-input"
         value={currentMessage}
+        placeholder="please input text content"
         onChange={(e) => setCurrentMessage(e.target.value)}
       />
       <button className="send-btn" onClick={onMessageSend}>

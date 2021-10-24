@@ -8,7 +8,7 @@ import {
 } from "../../types";
 import "./index.less";
 import { DemoMessageQueue } from "../../utils/demoMessageQueue";
-
+import "./index.less";
 function MessageList(props: any) {
   const { currentUser, eventBus } = props;
   const [currentMessageList, setCurrentMessageList] = useState<Array<IMessage>>(
